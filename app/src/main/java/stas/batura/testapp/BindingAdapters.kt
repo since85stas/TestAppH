@@ -15,6 +15,11 @@ fun TextView.userName(name: String?) {
     text = name
 }
 
+@BindingAdapter("bindText")
+fun TextView.bindText(name: String?) {
+    text = name
+}
+
 @BindingAdapter("loadVisible")
 fun ProgressBar.loadVisible(boolean: Boolean) {
     if (boolean) {

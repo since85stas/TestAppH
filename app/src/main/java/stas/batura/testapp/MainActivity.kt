@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         findViewById<CollapsingToolbarLayout>(R.id.toolbar_layout).title = title
-//        val navView: BottomNavigationView = findViewById(R.id.nav_view)
-//
-//        val navController = findNavController(R.id.nav_host_fragment)
-//
-//        navView.setupWithNavController(navController)
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
+        val navController = findNavController(R.id.nav_host_fragment)
+
+        navView.setupWithNavController(navController)
     }
 
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {
