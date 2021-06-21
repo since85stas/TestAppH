@@ -29,6 +29,10 @@ class UsersAdapter ( val viewModel: UsersViewModel
 
         fun bind (user: User) {
             binding.user = user
+            Glide.with(binding.root.context)
+                .load(user.avatUrl)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(binding.root.item_photo)
             binding.executePendingBindings()
         }
 

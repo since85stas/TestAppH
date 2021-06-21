@@ -14,35 +14,51 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_margin="16dp"
         android:padding="8dp"
+        android:elevation="8dp"
         android:onClick="@{() -> viewModel.onItemClick(user.userId)}"
         >
-
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="8dp">
+
+            <ImageView
+                android:layout_margin="16dp"
+                android:id="@+id/item_photo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                >
                 <TextView
-                    userName="@{user.firstName}"
+                    userName="@{user.firstName + user.lastName}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_weight="1"
-                    android:gravity="end"
-                    android:text="name"></TextView>
+                    android:gravity="start"
+                    android:layout_marginStart="12dp"
+                    android:text="name"
+                    android:textStyle="bold"
+                    ></TextView>
 
                 <TextView
-                    userName="@{user.lastName}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:gravity="start" />
+                    android:gravity="start"
+                    android:text="ofkdofdkfodkfodfkodkfodkfodkfokdfokdofkdofkodkfodkfodkf"
+                    />
+            </LinearLayout>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
